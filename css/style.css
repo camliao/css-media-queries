@@ -1,4 +1,65 @@
+* {
+box-sizing: border-box;
+}
+
 body {
   background-color: #dadada;
   font-size: 10px;
 }
+
+.container {
+  padding: 0 auto;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+/* "Modern Luxury Travel" */
+header {
+  padding: 2rem;
+}
+
+/* Should control the sections for all cities */
+.city {
+  display: block;
+  float: left;
+  width:100%;
+  padding-bottom: 1rem;
+}
+
+/* Makes images not spill out of container */
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* Edit text/style for "Modern Luxury Travel" here */
+h1 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Edit text/styling for cities here */
+h2 {
+  font-size: 2em;
+  text-align: left;
+  float: left;
+  position: absolute;
+}
+
+
+/* Media Queries */ 
+@media screen and (min-width: 575px) {
+  .city {
+    display: inline-block;
+    margin: 1%;
+    width: 35%;
+  }
+
+  @media screen and (min-width: 1199px) {
+    .city {
+      display: inline-block;
+      margin: 1%;
+      width: 25%;
+    }
