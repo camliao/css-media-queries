@@ -1,4 +1,4 @@
-* {
+*, *:before, *:after {
 box-sizing: border-box;
 }
 
@@ -10,7 +10,7 @@ body {
 .container {
   padding: 0 auto;
   margin: 0 auto;
-  width: 100%;
+  width: auto;
 }
 
 
@@ -19,20 +19,37 @@ header {
   padding: 2rem;
 }
 
+
 /* Should control the sections for all cities */
 
-.preview {
+.preview-baku {
+  background-image: url("../images/baku.jpg");
+  height: 25rem;
   display: inline-block;
-  width:100%;
   padding-bottom: 1rem;
 }
 
-
-/* Makes images not spill out of container */
-.responsive {
-  width: 100%;
-  height: auto;
+.preview-london {
+  background-image: url("../images/london.png");
+  height: 25rem;
+  display: inline-block;
+  padding-bottom: 1rem;
 }
+
+.preview-madrid {
+  background-image: url("../images/madrid.jpg");
+  height: 25rem;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+.preview-rome {
+  background-image: url("../images/rome.jpg");
+  height: 25rem;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
 
 /* Edit text/style for "Modern Luxury Travel" here */
 h1 {
@@ -51,15 +68,9 @@ h2 {
 
 
 /* Media Queries */
-@media screen and (min-width: 575px) {
-  .container {
-    padding: 2rem;
-    margin: 0 auto;
-  }
-}
 
 @media screen and (min-width: 575px) {
-  .preview {
+  .div {
     display: inline-block;
     float: center;
     margin: 1%;
@@ -68,15 +79,10 @@ h2 {
   }
 }
 
-@media screen and (min-width: 1199px) {
-  .container {
-    padding: 2rem;
-    margin: 0 auto;
-  }
-}
+
 
 @media screen and (min-width: 1199px) {
-  .preview {
+  .div {
     display: inline-block;
     float: center;
     margin: 1%;
