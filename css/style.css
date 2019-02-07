@@ -1,3 +1,5 @@
+
+/* Universal selector */
 * {
 box-sizing: border-box;
 }
@@ -7,66 +9,43 @@ body {
   font-size: 10px;
 }
 
+/* I am not sure if I set the container up right...*/
 .container {
   padding: 0 auto;
   margin: 0 auto;
-  width: auto;
+  width: 100%;
 }
 
-
-/* "Modern Luxury Travel" */
+/* Controls "Modern Luxury Travel" */
 header {
   padding: 2rem;
 }
 
+/* Should control the sizing/sections for all cities */
+div {
+  display: inline-block;
+  width:100%;
+  padding-bottom: 1rem;
+}
 
-/* Should control the sections for all cities */
+/* .responsive makes images not spill out of container? I initially tried
+the code block on lines 41-44 `.baku { }` that I've commented out below to crop/adjust
+the height and width for the images, but it did not seem to make a
+difference and couldn't figure out why :(  */
+.responsive {
+  width: 100%;
+  height: auto;
+}
 
-.preview-baku {
+/* Tried doing this for .baku, .london, .madrid, .rome to crop the
+images so they'd be all the same size, but did not have an effect? */
+/*
+.baku {
   background-image: url("../images/baku.jpg");
-  height: 25rem;
-
-  float: left;
-  width: 25%;
-  padding: 10px;
-  margin: 0;
-  border: 0;
-
+  height: 30rem;
+  width: 25rem;
 }
-
-.preview-london {
-  background-image: url("../images/london.png");
-  height: 25rem;
-
-  float: left;
-  width: 25%;
-  padding: 10px;
-  margin: 0;
-  border: 0;
-}
-
-.preview-madrid {
-  background-image: url("../images/madrid.jpg");
-  height: 25rem;
-
-  float: left;
-  width: 25%;
-  padding: 10px;
-  margin: 0;
-  border: 0;
-}
-
-.preview-rome {
-  background-image: url("../images/rome.jpg");
-  height: 25rem;
-
-  float: left;
-  width: 25%;
-  padding: 10px;
-  margin: 0;
-  border: 0;
-}
-
+*/
 
 /* Edit text/style for "Modern Luxury Travel" here */
 h1 {
@@ -85,9 +64,15 @@ h2 {
 
 
 /* Media Queries */
+@media screen and (min-width: 575px) {
+  .container {
+    padding: 2rem;
+    margin: 0 auto;
+  }
+}
 
 @media screen and (min-width: 575px) {
-  .div {
+  .preview {
     display: inline-block;
     float: center;
     margin: 1%;
@@ -96,10 +81,15 @@ h2 {
   }
 }
 
-
+@media screen and (min-width: 1199px) {
+  .container {
+    padding: 2rem;
+    margin: 0 auto;
+  }
+}
 
 @media screen and (min-width: 1199px) {
-  .div {
+  .preview {
     display: inline-block;
     float: center;
     margin: 1%;
